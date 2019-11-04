@@ -1,6 +1,6 @@
-module Shiftable
+class Shift
 
-  def create_shift(key, date)
+  def self.create_shift(key, date)
   keys = key_shift(key)
   dates = date_shift(date)
 
@@ -10,9 +10,10 @@ module Shiftable
   d = keys[3] + dates[3]
 
   [a, b, c, d]
+
   end
 
-  def key_shift(key)
+  def self.key_shift(key)
   a = key[0..1].to_i
   b = key[1..2].to_i
   c = key[2..3].to_i
@@ -21,7 +22,7 @@ module Shiftable
   [a, b, c, d]
   end
 
-  def date_shift(date)
+  def self.date_shift(date)
     date_squared = (date.to_i ** 2).to_s
     a = date_squared[-4].to_i
     b = date_squared[-3].to_i
