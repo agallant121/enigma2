@@ -23,7 +23,14 @@ class EnigmaTest < Minitest::Test
       key: "02715",
       date: "040895"
     }
+
+    expected_2 =  {
+        encryption: "lfhasasdvm ",
+        key: "02715",
+        date: Date.todays_date
+      }
   assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
+  assert_equal expected_2, @enigma.encrypt("hello world", "02715")
   end
 end
 
