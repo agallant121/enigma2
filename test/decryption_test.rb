@@ -1,6 +1,5 @@
 require "./test/test_helper"
 require 'date'
-require './lib/encryption'
 require './lib/decryption'
 require './lib/shift'
 
