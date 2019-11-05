@@ -5,7 +5,6 @@ class Decryption
     shift = Shift.create_shift(key, date)
 
     message.downcase.chars.map do |letter|
-
       if letter == " "
         actual = alphabet[(26 - shift[0])%27]
         shift.rotate!
