@@ -1,4 +1,5 @@
 class Enigma
+
   def initialize
     @encryption = Encryption.new
     @decryption = Decryption.new
@@ -6,8 +7,7 @@ class Enigma
 
   def encrypt(message, key = Key.random_key_generator, date = Date.todays_date)
   if key.length != 5 && key.length == 6
-  => date = key
-  => key = RandomNumber.number
+    date = key if key = Key.random_key_generator
   end
 
   {
