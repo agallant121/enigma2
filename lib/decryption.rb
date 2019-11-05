@@ -1,6 +1,5 @@
 class Decryption
 
-
   def decrypt(message, key, date)
     alphabet = ("a".."z").to_a << " "
     shift = Shift.create_shift(key, date)
