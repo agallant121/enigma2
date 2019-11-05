@@ -5,6 +5,7 @@ require './lib/encryption'
 require './lib/decryption'
 require './lib/shift'
 require './lib/key'
+require './lib/date'
 
 class EnigmaTest < Minitest::Test
 
