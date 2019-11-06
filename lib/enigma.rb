@@ -1,4 +1,12 @@
-class Enigma
+require 'date'
+require './lib/enigma'
+require './lib/encryption'
+require './lib/decryption'
+require './lib/shift'
+require './lib/key'
+require './lib/date'
+
+class Enigma < Key
 
   def initialize
     @encryption = Encryption.new
@@ -7,7 +15,8 @@ class Enigma
 
   def encrypt(message, key = Key.random_key_generator, date = Date.todays_date)
   if key.length != 5 && key.length == 6
-    date = key if key = Key.random_key_generator
+    date = key
+    key = Key.random_key_generator
   end
 
   {

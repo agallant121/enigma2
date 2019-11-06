@@ -29,8 +29,11 @@ class EnigmaTest < Minitest::Test
         key: "02715",
         date: Date.todays_date
       }
+    encryption = @enigma.encrypt("hello world", "040895")
   assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   assert_equal expected_2, @enigma.encrypt("hello world", "02715")
+  assert_equal 5, encryption[:key].length
+  assert_equal 11, encryption[:encryption].length
   end
 end
 
