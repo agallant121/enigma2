@@ -10,7 +10,7 @@ class Decryption
         shift.rotate!
         actual
       elsif !alphabet.include?(letter)
-        actual = letter
+        
       else
         actual = alphabet[(letter.ord-97 - shift[0])%27]
         shift.rotate!
