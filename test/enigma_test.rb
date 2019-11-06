@@ -53,7 +53,7 @@ class EnigmaTest < Minitest::Test
          date: Date.todays_date
       }
      assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
-     assert_equal expected_2, @enigma.decrypt("lfhasasdvm ", "02715")
+     assert_equal expected_2, @enigma.decrypt("lfhasasdvm ", "02715") #put in new message for current date
    end
 end
 
